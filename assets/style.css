@@ -76,15 +76,16 @@ h1 span + span {
 
 .tool-list {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
 .tool-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  min-height: 104px;
-  padding: 22px 26px;
+  min-height: 142px;
+  padding: 22px 22px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -150,19 +151,15 @@ a.tool-card:focus-visible {
   font-weight: 700;
 }
 
-.footer {
-  width: min(1120px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 0 0 36px;
-  color: #a1a1aa;
-  font-size: 12px;
-}
-
 .sp-only {
   display: none;
 }
 
 @media (max-width: 760px) {
+  .tool-list {
+    grid-template-columns: 1fr;
+  }
+
   .page {
     width: min(100% - 32px, 620px);
     padding: 14px 0 42px;
@@ -196,10 +193,6 @@ a.tool-card:focus-visible {
   .status {
     margin-left: 14px;
     white-space: nowrap;
-  }
-
-  .footer {
-    width: min(100% - 32px, 620px);
   }
 
   .sp-only {
