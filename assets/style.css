@@ -1,0 +1,253 @@
+:root {
+  --accent: #d71161;
+  --accent-dark: #b80d50;
+  --text: #222222;
+  --muted: #71717a;
+  --line: #e7e7ea;
+  --soft: #f7f7f8;
+  --disabled: #a1a1aa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic", "YuGothic", "Meiryo", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 72px 0 64px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(220px, 330px) 1fr;
+  align-items: center;
+  gap: 56px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.hero__eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.hero__description {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.tools {
+  padding-top: 52px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+}
+
+.section-heading span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.tool-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tool-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 104px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #ffffff;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+a.tool-card:hover {
+  border-color: rgba(215, 17, 97, 0.45);
+  box-shadow: 0 10px 30px rgba(32, 24, 28, 0.08);
+  transform: translateY(-1px);
+}
+
+a.tool-card:focus-visible {
+  outline: 3px solid rgba(215, 17, 97, 0.22);
+  outline-offset: 3px;
+}
+
+.tool-card__category {
+  margin: 0 0 7px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tool-card h3 {
+  margin: 0;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.5;
+}
+
+.tool-card__arrow {
+  flex: 0 0 auto;
+  margin-left: 24px;
+  color: var(--accent);
+  font-size: 29px;
+  line-height: 1;
+}
+
+.tool-card--disabled {
+  background: var(--soft);
+  color: var(--disabled);
+}
+
+.tool-card--disabled .tool-card__category {
+  color: var(--disabled);
+}
+
+.status {
+  flex: 0 0 auto;
+  margin-left: 24px;
+  padding: 6px 10px;
+  border: 1px solid #dddddf;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #77777f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 0 36px;
+  color: #a1a1aa;
+  font-size: 12px;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .page {
+    width: min(100% - 32px, 620px);
+    padding: 42px 0 48px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-bottom: 38px;
+  }
+
+  .hero__logo {
+    width: min(72%, 320px);
+  }
+
+  .tools {
+    padding-top: 38px;
+  }
+
+  .tool-card {
+    min-height: 92px;
+    padding: 18px 18px;
+    border-radius: 12px;
+  }
+
+  .tool-card__arrow {
+    margin-left: 14px;
+    font-size: 25px;
+  }
+
+  .status {
+    margin-left: 14px;
+    white-space: nowrap;
+  }
+
+  .footer {
+    width: min(100% - 32px, 620px);
+  }
+
+  .sp-only {
+    display: initial;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__logo {
+    width: 82%;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  .hero__description {
+    font-size: 14px;
+  }
+
+  .tool-card h3 {
+    font-size: 16px;
+  }
+}
