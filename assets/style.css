@@ -33,15 +33,15 @@ a {
 .page {
   width: min(1120px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 36px 0 56px;
+  padding: 18px 0 56px;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(150px, 220px) 1fr;
+  grid-template-columns: minmax(80px, 110px) 1fr;
   align-items: center;
-  gap: 36px;
-  padding-bottom: 28px;
+  gap: 24px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -57,8 +57,8 @@ a {
 
 h1 {
   margin: 0;
-  font-size: clamp(28px, 3.6vw, 44px);
-  line-height: 1.22;
+  font-size: clamp(22px, 2.6vw, 30px);
+  line-height: 1.15;
   letter-spacing: 0.01em;
 }
 
@@ -67,7 +67,7 @@ h1 span {
 }
 
 h1 span + span {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .tools {
@@ -165,17 +165,17 @@ a.tool-card:focus-visible {
 @media (max-width: 760px) {
   .page {
     width: min(100% - 32px, 620px);
-    padding: 26px 0 42px;
+    padding: 14px 0 42px;
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-bottom: 22px;
+    grid-template-columns: 86px 1fr;
+    gap: 16px;
+    padding-bottom: 12px;
   }
 
   .hero__logo {
-    width: min(58%, 240px);
+    width: 100%;
   }
 
   .tools {
@@ -209,11 +209,11 @@ a.tool-card:focus-visible {
 
 @media (max-width: 420px) {
   .hero__logo {
-    width: 68%;
+    width: 100%;
   }
 
   h1 {
-    font-size: 29px;
+    font-size: 22px;
   }
 
   .tool-card h3 {
