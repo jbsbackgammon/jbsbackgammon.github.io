@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "repo": "thumbnail",
+      "category": "THUMBNAIL",
+      "name": "YouTubeサムネイル作成",
+      "showWhenMissing": false
+    },
+    {
+      "repo": "tournament",
+      "category": "TOURNAMENT",
+      "name": "トーナメント表作成",
+      "showWhenMissing": false
+    },
+    {
+      "repo": "position",
+      "category": "POSITION",
+      "name": "ポジション画像作成",
+      "showWhenMissing": true
+    },
+    {
+      "repo": "match-replay",
+      "category": "MATCH-REPLAY",
+      "name": "棋譜自動再生システム",
+      "showWhenMissing": true
+    },
+    {
+      "repo": "official",
+      "category": "OFFICIAL",
+      "name": "JBS公式サイト リニューアル案",
+      "showWhenMissing": false
+    }
+  ]
+}
