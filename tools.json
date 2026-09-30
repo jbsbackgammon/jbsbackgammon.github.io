@@ -30,6 +30,18 @@
       "category": "OFFICIAL",
       "name": "JBS公式サイト リニューアル案",
       "showWhenMissing": false
+    },
+    {
+      "repo": "bracket-print",
+      "category": "BRACKET-PRINT",
+      "name": "bracket-print",
+      "showWhenMissing": false
+    },
+    {
+      "repo": "overlay",
+      "category": "OVERLAY",
+      "name": "overlay",
+      "showWhenMissing": false
     }
   ]
 }
