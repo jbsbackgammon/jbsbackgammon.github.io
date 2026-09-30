@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="JBS運営ツール一覧">
-  <title>JBS運営ツール</title>
+  <meta name="description" content="JBS運営ツール集">
+  <title>JBS運営ツール集</title>
   <link rel="icon" href="./favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -13,42 +13,20 @@
 <body>
   <main class="page">
     <header class="hero">
-      <img class="hero__logo" src="./assets/jbs-logo.png" alt="Japan Backgammon Society JBS">
-      <div class="hero__text"><h1>JBS運営ツール</h1></div>
-      <button class="edit-toggle" id="edit-toggle" type="button">表示編集</button>
+      <img
+        class="hero__logo"
+        src="./assets/jbs-logo.png"
+        alt="Japan Backgammon Society JBS"
+      >
+      <div class="hero__text">
+        <h1>JBS運営ツール集</h1>
+      </div>
     </header>
 
     <section class="tools" aria-label="運営ツール一覧">
       <div class="tool-list" id="tool-list" aria-live="polite">
         <p class="loading">ツール一覧を読み込み中です…</p>
       </div>
-    </section>
-
-    <section class="editor" id="editor" hidden aria-label="表示設定編集">
-      <div class="editor__head">
-        <div>
-          <h2>表示設定編集</h2>
-          <p>日本語名・英字ラベル・表示順をこのページ上で変更できます。</p>
-        </div>
-        <button class="editor__close" id="editor-close" type="button" aria-label="編集を閉じる">×</button>
-      </div>
-
-      <div class="editor__table-wrap">
-        <table class="editor__table">
-          <thead><tr><th>順序</th><th>リポジトリ</th><th>英字ラベル</th><th>日本語名</th></tr></thead>
-          <tbody id="editor-body"></tbody>
-        </table>
-      </div>
-
-      <div class="editor__save">
-        <label class="token-field">
-          <span>GitHub Fine-grained PAT</span>
-          <input id="github-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
-        </label>
-        <button class="save-button" id="save-config" type="button">GitHubに保存</button>
-      </div>
-      <p class="editor__note">トークンは保存しません。jbsbackgammon.github.io リポジトリの Contents: Read and write 権限が必要です。</p>
-      <p class="editor__message" id="editor-message" role="status"></p>
     </section>
   </main>
 
