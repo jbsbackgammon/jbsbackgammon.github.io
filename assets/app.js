@@ -4,7 +4,6 @@
   const OWNER = "jbsbackgammon";
   const ROOT_REPO = "jbsbackgammon.github.io";
   const API_BASE = "https://api.github.com";
-  const CONFIG_PATH = "tools.json";
 
   const toolList = document.getElementById("tool-list");
 
@@ -33,31 +32,6 @@
     return response.json();
   }
 
-  async function loadOrder() {
-    try {
-      const response = await fetch(`./${CONFIG_PATH}?v=${Date.now()}`, {
-        cache: "no-store"
-      });
-
-      if (!response.ok) return [];
-
-      const config = await response.json();
-
-      if (Array.isArray(config.order)) {
-        return config.order;
-      }
-
-      // v8 の tools.json からでも順序だけ引き継げるようにする
-      if (Array.isArray(config.tools)) {
-        return config.tools.map(item => item.repo).filter(Boolean);
-      }
-    } catch (error) {
-      console.warn("表示順設定を読み込めませんでした。", error);
-    }
-
-    return [];
-  }
-
   async function loadAllPublicRepos() {
     const all = [];
 
@@ -78,16 +52,10 @@
     );
   }
 
-  function sortRepos(repos, order) {
-    const rank = new Map(order.map((repo, index) => [repo, index]));
-
-    return [...repos].sort((a, b) => {
-      const aRank = rank.has(a.name) ? rank.get(a.name) : Number.MAX_SAFE_INTEGER;
-      const bRank = rank.has(b.name) ? rank.get(b.name) : Number.MAX_SAFE_INTEGER;
-
-      if (aRank !== bRank) return aRank - bRank;
-      return a.name.localeCompare(b.name, "en");
-    });
+  function sortRepos(repos) {
+    return [...repos].sort((a, b) =>
+      a.name.localeCompare(b.name, "en", { sensitivity: "base" })
+    );
   }
 
   async function getPageTitle(repo) {
@@ -141,12 +109,8 @@
 
   async function init() {
     try {
-      const [order, repos] = await Promise.all([
-        loadOrder(),
-        loadAllPublicRepos()
-      ]);
-
-      const sortedRepos = sortRepos(repos, order);
+      const repos = await loadAllPublicRepos();
+      const sortedRepos = sortRepos(repos);
 
       if (!sortedRepos.length) {
         toolList.innerHTML = '<p class="loading">表示できるツールがありません。</p>';
