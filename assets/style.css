@@ -84,8 +84,8 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 104px;
-  padding: 18px 20px;
+  min-height: 92px;
+  padding: 14px 18px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -184,8 +184,8 @@ a.tool-card:focus-visible {
   }
 
   .tool-card {
-    min-height: 78px;
-    padding: 14px 16px;
+    min-height: 70px;
+    padding: 12px 14px;
     border-radius: 12px;
   }
 
