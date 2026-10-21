@@ -82,10 +82,10 @@ h1 {
 
 .tool-card {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  min-height: 142px;
-  padding: 22px;
+  min-height: 104px;
+  padding: 18px 20px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #ffffff;
@@ -94,6 +94,11 @@ h1 {
     border-color 160ms ease,
     box-shadow 160ms ease,
     transform 160ms ease;
+}
+
+.tool-card > div {
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 a.tool-card:hover {
@@ -118,8 +123,11 @@ a.tool-card:focus-visible {
 
 .tool-card h3 {
   margin: 0;
+  overflow: hidden;
   font-size: clamp(17px, 2vw, 21px);
   line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .tool-card__arrow {
@@ -176,8 +184,8 @@ a.tool-card:focus-visible {
   }
 
   .tool-card {
-    min-height: 92px;
-    padding: 18px;
+    min-height: 78px;
+    padding: 14px 16px;
     border-radius: 12px;
   }
 
