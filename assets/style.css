@@ -130,14 +130,6 @@ a.tool-card:focus-visible {
   white-space: nowrap;
 }
 
-.tool-card__arrow {
-  flex: 0 0 auto;
-  margin-left: 24px;
-  color: var(--accent);
-  font-size: 29px;
-  line-height: 1;
-}
-
 .tool-card--disabled {
   background: var(--soft);
   color: var(--disabled);
@@ -187,11 +179,6 @@ a.tool-card:focus-visible {
     min-height: 70px;
     padding: 12px 14px;
     border-radius: 12px;
-  }
-
-  .tool-card__arrow {
-    margin-left: 14px;
-    font-size: 25px;
   }
 
   .status {

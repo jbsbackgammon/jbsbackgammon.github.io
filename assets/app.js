@@ -91,7 +91,6 @@
             <p class="tool-card__category">${category}</p>
             <h3>${displayName}</h3>
           </div>
-          <span class="tool-card__arrow" aria-hidden="true">→</span>
         </a>
       `;
     }
