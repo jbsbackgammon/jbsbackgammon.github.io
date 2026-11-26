@@ -104,7 +104,7 @@ a.tool-card:focus-visible {
   margin: 0;
   overflow: hidden;
   font-size: var(--font-size-20);
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-action);
   line-height: 1.5;
   text-overflow: ellipsis;
   white-space: nowrap;
