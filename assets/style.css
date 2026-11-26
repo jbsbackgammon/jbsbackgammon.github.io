@@ -93,7 +93,7 @@ a.tool-card:focus-visible {
 
 .tool-card__category {
   margin: 0 0 var(--space-4);
-  color: var(--color-45);
+  color: var(--color-pink);
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-action);
   overflow-wrap: anywhere;
@@ -112,6 +112,10 @@ a.tool-card:focus-visible {
 
 .tool-card--disabled {
   background: var(--color-95);
+  color: var(--color-45);
+}
+
+.tool-card--disabled .tool-card__category {
   color: var(--color-45);
 }
 
